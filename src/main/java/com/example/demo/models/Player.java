@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="players")
@@ -24,6 +25,10 @@ public class Player {
         return name;
     }
     public void setName(String name) {
+        if (name == "") {
+            name = "ANÒNIM";
+        }
+        ;
         this.name = name;
     }
 }
