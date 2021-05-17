@@ -1,18 +1,25 @@
 package com.example.demo.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name="players")
+//@Entity
+//@Table(name="players")
+@Document (collection = "players")
 public class Player {
 
     @Id
-    @Column(name="id")
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    //@Column(name="id")
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Field (name = "id")
     private long id;
 
-    @Column(name="name", nullable=false, length=100)
+    //@Column(name="name", nullable=false, length=100)
+    @Field (name = "name")
     private String name;
 
     public long getId() {

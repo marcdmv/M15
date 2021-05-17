@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "635f8e37-7542-4614-95ec-b78c7893433d",
+		"name": "M15-mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. {{host}}:{{port}}/players",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"player Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/players",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "2. {{host}}:{{port}}/players",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 7,\n    \"name\": \"player Y\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/players",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players"
+					]
+				},
+				"description": "2"
+			},
+			"response": []
+		},
+		{
+			"name": "3. {{host}}:{{port}}/players/1/games",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"diceA\": 6,\n    \"diceB\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/players/2/games",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"2",
+						"games"
+					]
+				},
+				"description": "3"
+			},
+			"response": []
+		},
+		{
+			"name": "4. {{host}}:{{port}}/players/1/games",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"diceA\": 3,\n    \"diceB\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/players/1/games",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				},
+				"description": "3"
+			},
+			"response": []
+		},
+		{
+			"name": "5. {{host}}:{{port}}/players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. {{host}}:{{port}}/players/1/games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players/1/games",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. {{host}}:{{port}}/players/ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players/ranking",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. {{host}}:{{port}}/players/ranking/loser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players/ranking/loser",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"ranking",
+						"loser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. {{host}}:{{port}}/players/ranking/winner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/players/ranking/winner",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
